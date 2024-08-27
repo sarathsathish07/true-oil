@@ -11,3 +11,180 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.custom-navbar {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  height: 80px; 
+  padding: 10px 20px;
+  width: 90%
+}
+
+.titleHome {
+  font-size: 28px !important;
+  font-weight: 800;
+}
+
+.nav-link-container {
+  display: flex;
+  
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link-title {
+  font-size: 18px;
+  color: white !important;
+  font-weight: 500;
+}
+
+.navbar-collapse {
+  justify-content: center;
+}
+.custom-navbar .nav-link-title {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.custom-navbar .nav-link-title:hover {
+  color: #000000 !important; 
+  text-decoration: underline;
+}
+.navbarmain {
+  background-color: transparent;
+  
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbarmain-scrolled {
+  background: linear-gradient(to right, #232526, #4ea7ff);
+  padding: 10px 0;
+}
+
+
+/* Footer */
+
+.footer {
+  background: linear-gradient(to right, #232526, #4ea7ff);
+  color: #fff;
+  padding: 40px 0;
+  margin-top: 50px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footerTitle {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footerText {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.iconLink {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.iconLink:hover {
+  color: #00acee;
+}
+
+.copyright {
+  font-size: 14px;
+  margin-top: 30px;
+}
+ /* Footer */
+
+ /* about */
+
+ .about-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.col-text {
+  margin-right: 70px;
+  margin-left: 20px;
+}
+
+
+ /* about */
+
+
+ /* app */
+
+
+.app-banner{
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+.header {
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.large-title {
+  font-size: 70px;
+}
+
+.large-subtitle {
+  font-size: 50px;
+}
+
+.medium-title {
+  font-size: 60px;
+}
+
+.medium-subtitle {
+  font-size: 40px;
+}
+
+.header-white {
+  color: white;
+}
+
+.header-black {
+  color: black;
+}
+
+
+ /* app */
+
