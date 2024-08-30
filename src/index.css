@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -151,6 +152,11 @@ code {
   background-position: center;
   transition: background-image 1s ease-in-out;
 }
+.aboutus-banner{
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+}
 
 .header {
   margin-top: 2%;
@@ -188,3 +194,50 @@ code {
 
  /* app */
 
+
+ /* aboutUS */
+.vision-wrap{
+  background-color: #d4eef9;
+}
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hover-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-card:hover {
+  transform: scale(1.05);
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h2 {
+  color: white;
+}
+
+.header-large-title {
+  font-size: 3rem;
+}
+
+.header-large-subtitle {
+  font-size: 1.5rem;
+}
+
+
+
+
+
+ /* aboutUS */
