@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import aboutImage from '../assets/images/1775.jpg';
+import aboutImage from '../assets/images/1775.webp';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer'; 
 

@@ -4,12 +4,12 @@ import MyNavbar from './Navbar';
 import Footer from './Footer';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import bannerImage from "../assets/images/08.jpg";
-import companyImage from "../assets/images/03.jpg";
-import visionImage from "../assets/images/09.jpg";
-import member1 from "../assets/images/boardmember1.jpg";
-import member2 from "../assets/images/boardmember1.jpg";
-import member3 from "../assets/images/boardmember1.jpg";
+import bannerImage from "../assets/images/08.webp";
+import companyImage from "../assets/images/03.webp";
+import visionImage from "../assets/images/09.webp";
+import member1 from "../assets/images/boardmember1.webp";
+import member2 from "../assets/images/boardmember1.webp";
+import member3 from "../assets/images/boardmember1.webp";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function AboutPage() {
