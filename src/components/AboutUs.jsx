@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import MyNavbar from './Navbar';
 import Footer from './Footer';
@@ -15,11 +15,28 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function AboutPage() {
   const [companyRef, companyInView] = useInView({ triggerOnce: true, threshold: 0.3 });
   const [visionRef, visionInView] = useInView({ triggerOnce: true, threshold: 0.3 });
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className="AboutPage">
       <div className='aboutus-banner' style={{ backgroundImage: `url(${bannerImage})`}}>
-        <div className="navbarmain" style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
+      <div className={`navbarmain ${scrolled ? 'navbarmain-scrolled' : ''}`}  style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
           <MyNavbar />
         </div>
         <header className="header" style={{ marginTop: '10%', marginLeft: '42%' }}>
