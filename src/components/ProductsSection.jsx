@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import dieselen590Image from '../assets/images/dieseld2.jpg';
 import dieseld2Image from '../assets/images/dieseld2.jpg';
 import jetFuelImage from '../assets/images/jetfuel.jpg';
-import vlsfo from '../assets/images/vlsfo.jpg';
+import vlsfo from '../assets/images/vlsfo.webp';
 import vlmgo from '../assets/images/VLMGO.jpg';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
