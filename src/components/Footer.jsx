@@ -39,7 +39,7 @@ function Footer() {
           </Col>
         </Row>
         <Row>
-          <Col className="text-center mt-4">
+          <Col className="text-center">
             <p className="copyright">
               &copy; 2024 True Oil LLC. All rights reserved.
             </p>

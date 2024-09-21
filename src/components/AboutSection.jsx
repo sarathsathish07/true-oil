@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 
 function AboutSection() {
   const { ref, inView } = useInView({
-    triggerOnce: false, 
+    triggerOnce: true, 
     threshold: 0.5,  
   });
 
@@ -21,12 +21,8 @@ function AboutSection() {
           >
             <h2 className="heading">True Commodities Oil Trading L.L.C</h2>
             <p className="text">
-              True Oil LLC is a leading provider of sustainable energy solutions, 
-              empowering industries around the globe. With a commitment to innovation 
-              and environmental responsibility, we strive to provide reliable energy 
-              while reducing our carbon footprint. Our team of experts is dedicated 
-              to driving the energy revolution and ensuring a brighter, cleaner future 
-              for all. Join us on our journey to fuel the world with sustainable energy.
+            True commodities Oil Trading is characterised not only by an experienced international team, but also by a high level of knowledge and expertise in the field. We are constantly improving and adopting the latest technologies and working methods to provide our clients with the best service and results. Our main goal is to fulfil our clients’ needs and achieve their business objectives.
+            Since our foundation, we have successfully completed numerous transactions and won the trust of clients all over the world. We work with the world’s key oil traders, refineries and energy end-users, which confirms our reliability and professionalism. Our experience and reputation speak for themselves, and we are proud of our long-term relationships with our clients.
             </p>
           </motion.div>
         </Col>

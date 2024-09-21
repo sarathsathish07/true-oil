@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import logo from '../assets/images/logo2-removebg-preview.png'; 
 
 function MyNavbar() {
   return (
@@ -12,7 +13,15 @@ function MyNavbar() {
           collapseOnSelect
           className="custom-navbar"
         >
-          <Navbar.Brand className="titleHome">True Oil</Navbar.Brand>
+          <LinkContainer to="/">
+            <Navbar.Brand className="titleHome">
+              <img
+                src={logo}
+                alt="True Oil Logo"
+                style={{ width: '200px', height: 'auto' }} 
+              />
+            </Navbar.Brand>
+          </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav' className="justify-content-center">
             <Nav className='ms-auto me-auto nav-link-container'>

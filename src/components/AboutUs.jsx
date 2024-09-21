@@ -1,146 +1,139 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import MyNavbar from './Navbar';
 import Footer from './Footer';
-import bannerImage from "../assets/images/08.jpg"; 
-import companyImage from "../assets/images/banner.jpg"; 
-import visionImage from "../assets/images/09.jpg"; 
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import bannerImage from "../assets/images/08.jpg";
+import companyImage from "../assets/images/03.jpg";
+import visionImage from "../assets/images/09.jpg";
 import member1 from "../assets/images/boardmember1.jpg";
 import member2 from "../assets/images/boardmember1.jpg";
 import member3 from "../assets/images/boardmember1.jpg";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function AboutPage() {
-  const [headerText, setHeaderText] = useState({
-    title: "About Us",
-    subtitle: "Learn more about our company",
-    color: "white",
-    size: { title: "large-title", subtitle: "large-subtitle" },
-    marginTop: '10%',
-    marginLeft: '42%',
-  });
-
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const [companyRef, companyInView] = useInView({ triggerOnce: true, threshold: 0.3 });
+  const [visionRef, visionInView] = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
     <div className="AboutPage">
       <div className='aboutus-banner' style={{ backgroundImage: `url(${bannerImage})`}}>
-        <div className={`navbarmain ${scrolled ? 'navbarmain-scrolled' : ''}`} style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
+        <div className="navbarmain" style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
           <MyNavbar />
         </div>
-        <header 
-          className="header" 
-          style={{ marginTop: headerText.marginTop, marginLeft: headerText.marginLeft }}
-        >
-          <h2 className={`${headerText.size.title} header-${headerText.color}`}>
-            {headerText.title}
-          </h2>
+        <header className="header" style={{ marginTop: '10%', marginLeft: '42%' }}>
+          <h2 className="large-title header-white"><b>About Us</b></h2>
         </header>
       </div>
       
       <div className='company-wrap'>
-        <Container className="about-content" style={{ marginBottom: "80px", paddingTop: "90px", paddingBottom: "50px" }}>
-          <Row className="align-items-center fade-in">
-            <Col md={5}>
-              <img 
-                src={companyImage} 
-                alt="Company" 
-                className="img-fluid rounded shadow-lg" 
-                style={{ width: '100%', height: 'auto' }}
-              />
-            </Col>
-            <Col md={6}>
-              <h3>Our Company</h3>
-              <p>
-                Welcome to True Oil! We are a leading provider of innovative solutions in the energy sector. Our mission is to empower industries with sustainable and reliable energy solutions, helping to build a better future for all.
-              </p>
-              <p>
-                With years of experience and a team of dedicated professionals, we are committed to delivering high-quality products and services that meet the evolving needs of our customers. Our values are rooted in integrity, innovation, and excellence.
-              </p>
-              <p>
-                We believe in the power of collaboration and are constantly working to forge strong partnerships that drive mutual growth and success. Join us on our journey as we continue to lead the way in the energy industry.
-              </p>
-            </Col>
-          </Row>
+        <Container className="about-content" style={{ marginBottom: "40px", paddingTop: "40px", paddingBottom: "30px" }} ref={companyRef}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={companyInView ? { opacity: 1 } : {}}
+            transition={{ duration: 1 }}
+          >
+            <Row className="align-items-center fade-in">
+              <Col md={5}>
+                <img 
+                  src={companyImage} 
+                  alt="Company" 
+                  className="img-fluid rounded shadow-lg" 
+                  style={{ width: '100%', height: 'auto' }}
+                />
+              </Col>
+              <Col md={6}>
+                <h2><b>Our Company</b></h2>
+                <p  style={{fontFamily:"Roboto",lineHeight:"30px"}}>
+                In these times of increasingly complex and dynamic international energy trade, our company stands out as an innovative and customer-centric leader. We pride ourselves on our highly skilled professionals and innovative approaches that enable us to provide high quality agency services to our clients around the world in the international energy supply industry.
+
+                
+                The True commodities Oil Trading team is an international agent for the organisation of coolie transactions in the energy sector. We provide the link between refineries around the world and end consumers. 
+
+                
+                True commodities Oil Trading has historically traded oil and petroleum products worldwide. But our interests and capabilities extend to all energy markets, including coal, biofuels, natural gas, renewables and more.
+
+                </p>
+              </Col>
+            </Row>
+          </motion.div>
         </Container>
       </div>
 
-      <div className="vision-wrap" style={{ paddingTop: "80px", paddingBottom: "50px" }}>
+      <div className="vision-wrap" style={{ paddingTop: "40px", paddingBottom: "30px" }} ref={visionRef}>
         <Container>
-          <Row className="align-items-center fade-in">
-            <Col md={5} className="order-md-2">
-              <img 
-                src={visionImage} 
-                alt="Our Vision" 
-                className="img-fluid rounded shadow-lg" 
-                style={{ width: '100%', height: 'auto' }}
-              />
-            </Col>
-            <Col md={6} className="order-md-1">
-              <h3>Our Vision</h3>
-              <p>
-                At True Oil, our vision is to be at the forefront of energy innovation. We strive to revolutionize the industry by creating solutions that not only meet today's needs but also anticipate future challenges.
-              </p>
-              <p>
-                Our commitment is to lead with sustainability, efficiency, and a focus on enhancing the quality of life for communities around the world. Through continuous research and development, we aim to pioneer advancements that will shape the future of energy.
-              </p>
-              <p>
-                We believe in a future where energy is accessible, clean, and affordable for everyone, and we are dedicated to turning this vision into reality.
-              </p>
-            </Col>
-          </Row>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={visionInView ? { opacity: 1 } : {}}
+            transition={{ duration: 1 }}
+          >
+            <Row className=" fade-in">
+              <Col md={5} className="order-md-2">
+                <img 
+                  src={visionImage} 
+                  alt="Our Vision" 
+                  className="img-fluid rounded shadow-lg" 
+                  style={{ width: '100%', height: 'auto' }}
+                />
+              </Col>
+              <Col md={6} className="order-md-1">
+                <h2><b>Our Vision</b></h2>
+                <p style={{fontFamily:"Roboto",lineHeight:"30px"}}>
+                Our company’s mission is to provide our clients with the most efficient and transparent transactions in international energy trading.
+                
+                We are constantly improving and adopting the latest technologies and working methods to provide our clients with the best service and results.
+               
+                We strive to be a reliable partner for our clients and to offer innovative solutions that meet their needs and expectations.
+                Our emphasis is on Lowest Prices, Customer Commitment, and Marine Environmental Commitment.
+                If you are looking for a reliable partner for energy sales and purchases, you have come to the right place. Entrust your transactions to professionals and you will not regret your choice. With us, your business will be in safe hands.
+
+                </p>
+              </Col>
+            </Row>
+          </motion.div>
         </Container>
       </div>
 
       <Container className="board-members mt-5">
-        <h3 className="text-center mb-4">Board Members</h3>
-        <Row className="fade-in">
-          <Col md={4}>
-            <div className="card text-center border-0 shadow-lg hover-card" style={{ width: '80%', margin: '0 auto' }}>
-              <img src={member1} alt="Member 1" className="card-img-top mx-auto mt-3" style={{ width: '50%' }} />
-              <div className="card-body">
-                <h5 className="card-title">Manny</h5>
-                <p className="card-text">Chairman of the Board</p>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <h2 className="text-center mb-4">Board Members</h2>
+          <Row className="fade-in">
+            <Col md={4}>
+              <div className="card text-center border-0 shadow-lg hover-card" style={{ width: '80%', margin: '0 auto' }}>
+                <img src={member1} alt="Member 1" className="card-img-top mx-auto mt-3" style={{ width: '50%' }} />
+                <div className="card-body">
+                  <h5 className="card-title">Manny</h5>
+                  <p className="card-text">Chairman of the Board</p>
+                </div>
               </div>
-            </div>
-          </Col>
-          <Col md={4}>
-            <div className="card text-center border-0 shadow-lg hover-card" style={{ width: '80%', margin: '0 auto' }}>
-              <img src={member2} alt="Member 2" className="card-img-top mx-auto mt-3" style={{ width: '50%' }} />
-              <div className="card-body">
-                <h5 className="card-title">Peter</h5>
-                <p className="card-text">Chief Executive Officer</p>
+            </Col>
+            <Col md={4}>
+              <div className="card text-center border-0 shadow-lg hover-card" style={{ width: '80%', margin: '0 auto' }}>
+                <img src={member2} alt="Member 2" className="card-img-top mx-auto mt-3" style={{ width: '50%' }} />
+                <div className="card-body">
+                  <h5 className="card-title">Peter</h5>
+                  <p className="card-text">Chief Executive Officer</p>
+                </div>
               </div>
-            </div>
-          </Col>
-          <Col md={4}>
-            <div className="card text-center border-0 shadow-lg hover-card" style={{ width: '80%', margin: '0 auto' }}>
-              <img src={member3} alt="Member 3" className="card-img-top mx-auto mt-3" style={{ width: '50%' }} />
-              <div className="card-body">
-                <h5 className="card-title">Moatz</h5>
-                <p className="card-text">Chief Operating Officer</p>
+            </Col>
+            <Col md={4}>
+              <div className="card text-center border-0 shadow-lg hover-card" style={{ width: '80%', margin: '0 auto' }}>
+                <img src={member3} alt="Member 3" className="card-img-top mx-auto mt-3" style={{ width: '50%' }} />
+                <div className="card-body">
+                  <h5 className="card-title">Moatz</h5>
+                  <p className="card-text">Chief Operating Officer</p>
+                </div>
               </div>
-            </div>
-          </Col>
-        </Row>
+            </Col>
+          </Row>
+        </motion.div>
       </Container>
-      
+
       <Footer />
     </div>
   );

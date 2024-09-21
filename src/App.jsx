@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MyNavbar from './components/Navbar'; 
 import AboutSection from './components/AboutSection';
+import ProductsSection from './components/ProductsSection';
 import bgimage1 from "../src/assets/images/bg-1.jpg";
 import bgimage2 from "../src/assets/images/bg-2.jpg";
 import Footer from './components/Footer';
@@ -22,7 +23,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -84,6 +85,7 @@ function App() {
         </header>
       </div>
       <AboutSection />
+      <ProductsSection />
       <Footer />
     </div>
   );
