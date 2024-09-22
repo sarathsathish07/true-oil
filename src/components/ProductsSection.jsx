@@ -3,11 +3,14 @@ import Slider from 'react-slick';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import dieselen590Image from '../assets/images/dieseld2.jpg';
+import dieselen590Image from '../assets/images/dieselen590.webp';
 import dieseld2Image from '../assets/images/dieseld2.jpg';
 import jetFuelImage from '../assets/images/jetfuel.jpg';
 import vlsfo from '../assets/images/vlsfo.webp';
 import vlmgo from '../assets/images/VLMGO.jpg';
+import naphtha from '../assets/images/naphtha.webp'
+import lng from '../assets/images/lng.webp'
+
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function ProductsSection() {
@@ -39,12 +42,12 @@ function ProductsSection() {
     },
     { 
       name: 'Naphtha', 
-      image: dieselen590Image, 
+      image: naphtha, 
       details: 'Naphtha is a volatile, flammable liquid hydrocarbon mixture obtained from petroleum distillation. It is a key feedstock in the petrochemical industry and is also used as a blending component in gasoline.Used in the production of high-octane gasoline, chemicals, and as a feedstock for ethylene production in steam crackers.', 
     },
     { 
       name: 'LNG', 
-      image: dieselen590Image, 
+      image: lng, 
       details: 'Liquefied natural gas (LNG) is natural gas that has been cooled down to liquid form for ease of storage or transport. It occupies about 1/600th of the volume of natural gas in its gaseous state, making it economical to transport over long distances.It is used primarily for heating, electricity generation, and as a fuel for heavy-duty vehicles.', 
     },
     { 
