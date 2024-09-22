@@ -236,6 +236,9 @@ code {
   font-size: 1.5rem;
 }
 
+.board-member-img {
+  height: 200px; /* Set fixed height */
+}
 
 
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Card } from 'react-bootstrap';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import dieselen590Image from '../assets/images/dieselen590.webp';
 import dieseld2Image from '../assets/images/dieseld2.jpg';
 import jetFuelImage from '../assets/images/jetfuel.jpg';
 import vlsfo from '../assets/images/vlsfo.webp';
-import vlmgo from '../assets/images/VLMGO.jpg';
+import vlmgo from '../assets/images/VLMGO.webp';
 import naphtha from '../assets/images/naphtha.webp'
 import lng from '../assets/images/lng.webp'
 

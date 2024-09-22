@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import logo from '../assets/images/logo2-removebg-preview.png'; 
+import logo from '../assets/images/logo2.webp'; 
 
 function MyNavbar() {
   return (

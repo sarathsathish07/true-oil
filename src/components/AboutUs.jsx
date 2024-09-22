@@ -7,8 +7,8 @@ import { useInView } from 'react-intersection-observer';
 import bannerImage from "../assets/images/08.webp";
 import companyImage from "../assets/images/03.webp";
 import visionImage from "../assets/images/09.webp";
-import member1 from "../assets/images/boardmember1.webp";
-import member2 from "../assets/images/boardmember1.webp";
+import member1 from "../assets/images/manni.webp";
+import member2 from "../assets/images/peter.webp";
 import member3 from "../assets/images/boardmember1.webp";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -120,19 +120,20 @@ function AboutPage() {
         >
           <h2 className="text-center mb-4">Board Members</h2>
           <Row className="fade-in">
+          <Col md={4}>
+  <div className="card text-center border-0 shadow-lg hover-card" style={{ width: '80%', margin: '0 auto' }}>
+    <img src={member1} alt="Member 1" className="card-img-top mx-auto mt-3 board-member-img" style={{ width: '40%' }} />
+    <div className="card-body">
+      <h5 className="card-title">Manny</h5>
+      <p className="card-text">Chairman of the Board</p>
+    </div>
+  </div>
+</Col>
+
             <Col md={4}>
               <div className="card text-center border-0 shadow-lg hover-card" style={{ width: '80%', margin: '0 auto' }}>
-                <img src={member1} alt="Member 1" className="card-img-top mx-auto mt-3" style={{ width: '50%' }} />
-                <div className="card-body">
-                  <h5 className="card-title">Manny</h5>
-                  <p className="card-text">Chairman of the Board</p>
-                </div>
-              </div>
-            </Col>
-            <Col md={4}>
-              <div className="card text-center border-0 shadow-lg hover-card" style={{ width: '80%', margin: '0 auto' }}>
-                <img src={member2} alt="Member 2" className="card-img-top mx-auto mt-3" style={{ width: '50%' }} />
-                <div className="card-body">
+              <img src={member2} alt="Member 1" className="card-img-top mx-auto mt-3 board-member-img" style={{ width: '40%' }} />
+              <div className="card-body">
                   <h5 className="card-title">Peter</h5>
                   <p className="card-text">Chief Executive Officer</p>
                 </div>
