@@ -56,7 +56,7 @@ function App() {
             subtitle: "Fueling the Future",
             color: "black",
             size: { title: "medium-title", subtitle: "medium-subtitle" },
-            marginTop: '2%',
+            marginTop: '10%', 
             marginLeft: '5%',
           };
         }

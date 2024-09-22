@@ -13,7 +13,6 @@ code {
 .custom-navbar {
   display: flex;
   align-items: center;
-  background-color: transparent;
   height: 80px; 
   padding: 10px 20px;
   width: 90%
@@ -59,8 +58,7 @@ code {
 }
 
 .navbarmain-scrolled {
-  background: #2371bf;
-  padding: 10px 0;
+  background-color: rgba(255,255,255, 0.4);
 }
 
 
@@ -161,6 +159,11 @@ code {
 .header {
   margin-top: 2%;
   margin-left: 5%;
+  
+}
+.home-header {
+  
+  background-color: rgba(255,255,255, 0.15);
 }
 
 .header h2 {

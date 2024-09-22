@@ -5,7 +5,7 @@ import logo from '../assets/images/logo2.webp';
 
 function MyNavbar() {
   return (
-    <header>
+    <header className='home-header'>
       <Container>
         <Navbar
           variant='dark'
