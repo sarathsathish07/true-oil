@@ -19,7 +19,7 @@ function Footer() {
           <Col className='mx-5'>
             <h5 className="footerTitle">Contact</h5>
             <p className="footerText">
-              Email: info@trueoil.com<br />
+              Email: info@true-oil.com<br />
               Phone: +971 56 287 8335
             </p>
           </Col>
