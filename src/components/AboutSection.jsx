@@ -13,7 +13,7 @@ function AboutSection() {
   return (
     <Container className="about-section" ref={ref}>
       <Row>
-        <Col md={6} className="col-text">
+        <Col md={6} xs={12} className="col-text">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}  

@@ -8,7 +8,7 @@ import bannerImage from "../assets/images/08.webp";
 import companyImage from "../assets/images/03.webp";
 import visionImage from "../assets/images/09.webp";
 import member1 from "../assets/images/manni.webp";
-import member2 from "../assets/images/peter.webp";
+import member2 from "../assets/images/peter-removebg-preview.webp";
 import member3 from "../assets/images/boardmember1.webp";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
