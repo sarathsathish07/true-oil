@@ -15,7 +15,7 @@ code {
   align-items: center;
   height: 80px; 
   padding: 10px 20px;
-  width: 90%
+  /* width: 90% */
 }
 
 .titleHome {
@@ -132,7 +132,7 @@ code {
  /* about */
 
  .about-section {
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 50px;
 }
 
@@ -163,7 +163,7 @@ code {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .app-banner .image1,
@@ -190,7 +190,7 @@ code {
 }
 
 .mobile-heading {
-  font-size: 1.5rem; 
+  font-size: 2rem; 
 }
 
 .mobile-padding {
@@ -199,7 +199,7 @@ code {
 
 @media (max-width: 768px) {
   .mobile-heading {
-    font-size: 1.7rem; 
+    font-size: 1.5rem; 
     text-align: center;
   }
 
@@ -232,12 +232,10 @@ code {
   }
 }
 
-
  /* about */
 
 
  /* app */
-
 
 .app-banner{
   height: 100vh;
@@ -289,7 +287,6 @@ code {
 .header-black {
   color: black;
 }
-
 
  /* app */
 
@@ -346,7 +343,6 @@ code {
     margin-bottom: 20px;
   }
 }
-
 
  /* aboutUS */
 
@@ -453,6 +449,14 @@ code {
   position: relative;
   display: inline-block;
 }
+.about-section h2 {
+  position: relative;
+  display: inline-block;
+}
+/* .company-section h2 {
+  position: relative;
+  display: inline-block;
+} */
 
 .products-section h2::after {
   content: '';
@@ -464,6 +468,27 @@ code {
   height: 3px; 
   background-color: #2371bf; 
 }
+/* .about-section h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 50%; 
+  height: 3px; 
+  background-color: #2371bf; 
+} */
+/* .company-section h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  transform: translateX(-50%);
+  width: 50%; 
+  height: 3px; 
+  background-color: #2371bf; 
+} */
+
 @media (max-width: 768px) { 
   .mobile-product-list {
     display: flex;
@@ -518,8 +543,6 @@ code {
     display: block;
   }
 }
-
-
 
 
 /* produuctssection */

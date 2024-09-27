@@ -73,7 +73,7 @@ function ProductsSection() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: isMobile ? 1 : 4,  // Show 1 slide on mobile, 4 on larger screens
+    slidesToShow: isMobile ? 1 : 4,  
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -117,7 +117,7 @@ function ProductsSection() {
 
   return (
     <Container className="products-section mt-5">
-      <h2 className="text-center mb-4">Our Products</h2>
+      <h2 className="text-center mb-4"><b>Our Products</b></h2>
       <p className="text-center" style={{fontSize:"17px"}}>
         We offer a wide range of high-quality petroleum products to meet the energy needs of various industries.
       </p>
