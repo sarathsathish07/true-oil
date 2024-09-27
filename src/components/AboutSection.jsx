@@ -81,7 +81,7 @@ function AboutSection() {
                 src={aboutImage}
                 alt="About True Oil"
                 className="image"
-                style={{ height: '300px', width: 'auto' }}
+                style={{ height: '340px', width: '500px' }}
               />
             </motion.div>
           ) : (
