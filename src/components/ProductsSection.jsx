@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import { Container, Card } from 'react-bootstrap';
 import 'slick-carousel/slick/slick.css';
@@ -10,10 +10,22 @@ import vlsfo from '../assets/images/vlsfo.webp';
 import vlmgo from '../assets/images/VLMGO.webp';
 import naphtha from '../assets/images/naphtha.webp'
 import lng from '../assets/images/lng.webp'
-
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function ProductsSection() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); // Check on initial load
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const products = [
     { 
       name: 'Diesel EN590', 
@@ -61,7 +73,7 @@ function ProductsSection() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,  
+    slidesToShow: isMobile ? 1 : 4,  // Show 1 slide on mobile, 4 on larger screens
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -70,7 +82,7 @@ function ProductsSection() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3, 
+          slidesToShow: isMobile ? 1 : 3, 
           slidesToScroll: 1,
           infinite: true,
           arrows: true,
@@ -79,7 +91,7 @@ function ProductsSection() {
       {
         breakpoint: 768,  
         settings: {
-          slidesToShow: 2,  
+          slidesToShow: 1,  
           slidesToScroll: 1,
           arrows: true,
         },
@@ -87,7 +99,7 @@ function ProductsSection() {
       {
         breakpoint: 600,  
         settings: {
-          slidesToShow: 2, 
+          slidesToShow: 1, 
           slidesToScroll: 1,
           arrows: true,
         },
@@ -102,8 +114,6 @@ function ProductsSection() {
       },
     ],
   };
-  
-  
 
   return (
     <Container className="products-section mt-5">
@@ -111,10 +121,10 @@ function ProductsSection() {
       <p className="text-center" style={{fontSize:"17px"}}>
         We offer a wide range of high-quality petroleum products to meet the energy needs of various industries.
       </p>
-      <Slider {...settings}>
-        {products.map((product, index) => (
-          <div key={index} className="p-3">
-            <Card className="product-card">
+      {isMobile ? (
+        <div className="mobile-product-list">
+          {products.map((product, index) => (
+            <Card key={index} className="product-card mb-3">
               <div className="card-image-container">
                 <img src={product.image} alt={product.name} className="product-image" />
                 <div className="overlay">
@@ -126,9 +136,28 @@ function ProductsSection() {
                 </div>
               </div>
             </Card>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </div>
+      ) : (
+        <Slider {...settings}>
+          {products.map((product, index) => (
+            <div key={index} className="p-3">
+              <Card className="product-card">
+                <div className="card-image-container">
+                  <img src={product.image} alt={product.name} className="product-image" />
+                  <div className="overlay">
+                    <div className="product-text">{product.name}</div>
+                  </div>
+                  <div className="hover-details">
+                    <h5>{product.name}</h5>
+                    <p className="px-2">{product.details}</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          ))}
+        </Slider>
+      )}
     </Container>
   );
 }
@@ -142,7 +171,7 @@ function SampleNextArrow(props) {
         ...style,
         display: 'block',
         right: '-30px',
-        color:"black",
+        color: "black",
         zIndex: 2,
       }}
       onClick={onClick}
@@ -161,7 +190,7 @@ function SamplePrevArrow(props) {
         ...style,
         display: 'block',
         left: '-30px',
-        color:"black",
+        color: "black",
         zIndex: 2,
       }}
       onClick={onClick}
@@ -170,4 +199,5 @@ function SamplePrevArrow(props) {
     </div>
   );
 }
+
 export default ProductsSection;

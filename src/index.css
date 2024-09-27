@@ -64,7 +64,14 @@ code {
 .navbarmain-scrolled {
   background-color: rgba(255,255,255, 0.4);
 }
-
+@media (max-width: 768px) {
+  .custom-toggle {
+    margin-right: 0px;
+  }
+}
+.custom-toggle .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
 
 /* Footer */
 
@@ -110,6 +117,16 @@ code {
   font-size: 14px;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .footerTitle {
+    margin-bottom: 7px; 
+  }
+
+  .footerText {
+    margin-top: 5px; 
+  }
+}
  /* Footer */
 
  /* about */
@@ -133,12 +150,86 @@ code {
 
 .image {
   width: 100%;
+  max-width: 100%;
   border-radius: 8px;
 }
+@media (max-width: 768px) {
+  .image {
+    height: auto; 
+  }
+}
+
+.app-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-banner .image1,
+.app-banner .image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.app-banner .image1.show,
+.app-banner .image2.show {
+  opacity: 1; 
+}
+
 
 .col-text {
   margin-right: 70px;
-  /* margin-left: 20px; */
+}
+
+.mobile-heading {
+  font-size: 1.5rem; 
+}
+
+.mobile-padding {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .mobile-heading {
+    font-size: 1.7rem; 
+    text-align: center;
+  }
+
+  .text {
+    padding: 15px; 
+  }
+}
+.aboutUsHeader h2 {
+ margin-top: 10% !important;
+ margin-left: 40% !important;
+}
+
+@media (max-width: 768px) {
+  .aboutUsHeader h2 {
+    font-size: 30px;
+   margin-top: 40% !important;
+   margin-left: 35% !important;
+  }
+
+  .about-content, .vision-wrap {
+    padding: 20px 10px;
+  }
+  
+  .board-members h2 {
+    font-size: 24px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
 }
 
 
@@ -245,10 +336,16 @@ code {
 }
 
 .board-member-img {
-  height: 200px; /* Set fixed height */
+  height: 200px; 
 }
 
+@media (max-width: 767px) {
 
+
+  .board-members .col-md-4 {
+    margin-bottom: 20px;
+  }
+}
 
 
  /* aboutUS */
@@ -366,6 +463,60 @@ code {
   width: 50%; 
   height: 3px; 
   background-color: #2371bf; 
+}
+@media (max-width: 768px) { 
+  .mobile-product-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+  }
+
+  .product-card {
+    width: 100%;
+    height: 300px;
+    max-width: 400px; 
+    margin-bottom: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+
+  .product-image {
+    height: 300px; 
+    object-fit: cover;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .hover-details {
+    display: none; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 10px;
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+  }
+
+  .card-image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+
+  .product-card:hover .hover-details {
+    display: block;
+  }
 }
 
 

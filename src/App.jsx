@@ -8,26 +8,13 @@ import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const [backgroundImage, setBackgroundImage] = useState(bgimage1);
-  const [headerText, setHeaderText] = useState({
-    title: "Powering Progress",
-    subtitle: "Fueling the Future",
-    color: "black",
-    size: { title: "large-title", subtitle: "large-subtitle" },
-    marginTop: '2%',
-    marginLeft: '5%',
-  });
-
+  const [showFirstImage, setShowFirstImage] = useState(true); // Controls which image to show
   const [scrolled, setScrolled] = useState(false);
 
-
+  // Track scroll position to change navbar style
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -37,53 +24,37 @@ function App() {
     };
   }, []);
 
+  // Toggle images at an interval
   useEffect(() => {
     const interval = setInterval(() => {
-      setBackgroundImage((prevImage) => (prevImage === bgimage1 ? bgimage2 : bgimage1));
-      setHeaderText((prevText) => {
-        if (prevText.title === "Powering Progress") {
-          return {
-            title: "Empowering Industry",
-            subtitle: "Energizing the World",
-            color: "white",
-            size: { title: "medium-title", subtitle: "medium-subtitle" },
-            marginTop: '10%', 
-            marginLeft: '5%',
-          };
-        } else {
-          return {
-            title: "Powering Progress",
-            subtitle: "Fueling the Future",
-            color: "black",
-            size: { title: "medium-title", subtitle: "medium-subtitle" },
-            marginTop: '10%', 
-            marginLeft: '5%',
-          };
-        }
-      });
-    }, 5000);
+      setShowFirstImage((prevShowFirstImage) => !prevShowFirstImage); // Toggle between images
+    }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="App">
-      <div className='app-banner' style={{ backgroundImage: `url(${backgroundImage})` }}>
-          <div className={`navbarmain ${scrolled ? 'navbarmain-scrolled' : ''}`}  style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
-        <MyNavbar />
+      <div className="app-banner">
+        {/* Background Image Layers */}
+        <div className={`image1 ${showFirstImage ? 'show' : ''}`} style={{ backgroundImage: `url(${bgimage1})` }}></div>
+        <div className={`image2 ${!showFirstImage ? 'show' : ''}`} style={{ backgroundImage: `url(${bgimage2})` }}></div>
+
+        {/* Navbar */}
+        <div className={`navbarmain ${scrolled ? 'navbarmain-scrolled' : ''}`} style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
+          <MyNavbar />
+        </div>
+
+        {/* Text Container (unchanged) */}
+        <div className="text-container" style={{ position: 'relative', zIndex: 2 }}>
+          <header className="header" style={{ marginTop: '2%', marginLeft: '5%' }}>
+            <h2 className="large-title header-black">Powering Progress</h2>
+            <h2 className="large-subtitle header-black">Fueling the Future</h2>
+          </header>
+        </div>
       </div>
-        <header 
-          className="header" 
-          style={{ marginTop: headerText.marginTop, marginLeft: headerText.marginLeft }}
-        >
-          <h2 className={`${headerText.size.title} header-${headerText.color}`}>
-            {headerText.title}
-          </h2>
-          <h2 className={`${headerText.size.subtitle} header-${headerText.color}`}>
-            {headerText.subtitle}
-          </h2>
-        </header>
-      </div>
+
+      {/* Other Sections */}
       <AboutSection />
       <ProductsSection />
       <Footer />
