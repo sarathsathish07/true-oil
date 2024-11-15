@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MyNavbar from './components/Navbar'; 
 import AboutSection from './components/AboutSection';
 import ProductsSection from './components/ProductsSection';
-import bgimage1 from "../src/assets/images/bg-1.webp";
+import bgimage1 from "../src/assets/images/bg-2.webp";
 import bgimage2 from "../src/assets/images/bg-2.webp";
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
