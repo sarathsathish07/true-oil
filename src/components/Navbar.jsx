@@ -53,6 +53,9 @@ function MyNavbar() {
               <LinkContainer to="/about">
                 <Nav.Link className="nav-link-title" onClick={() => setExpanded(false)}>About Us</Nav.Link>
               </LinkContainer>
+              <LinkContainer to="/contact">
+                <Nav.Link className="nav-link-title" onClick={() => setExpanded(false)}>Contact Us</Nav.Link>
+              </LinkContainer>
               {/* <Nav.Link className="nav-link-title" onClick={() => setExpanded(false)}>Products</Nav.Link>
               <Nav.Link className="nav-link-title" onClick={() => setExpanded(false)}>Services</Nav.Link>
               <Nav.Link className="nav-link-title" onClick={() => setExpanded(false)}>Partners</Nav.Link> */}
