@@ -82,10 +82,10 @@ function AboutPage() {
                   In these times of increasingly complex and dynamic international energy trade, our company stands out as an innovative and customer-centric leader. We pride ourselves on our highly skilled professionals and innovative approaches that enable us to provide high quality agency services to our clients around the world in the international energy supply industry.
 
                 
-The True commodities Oil Trading team is an international agent for the organisation of coolie transactions in the energy sector. We provide the link between refineries around the world and end consumers. 
+The Taknia Oil Trading team is an international agent for the organisation of coolie transactions in the energy sector. We provide the link between refineries around the world and end consumers. 
 
 
-True commodities Oil Trading has historically traded oil and petroleum products worldwide. But our interests and capabilities extend to all energy markets, including coal, biofuels, natural gas, renewables and more.
+Taknia Oil Trading has historically traded oil and petroleum products worldwide. But our interests and capabilities extend to all energy markets, including coal, biofuels, natural gas, renewables and more.
 
                   </p>
                 </Col>
@@ -111,10 +111,10 @@ True commodities Oil Trading has historically traded oil and petroleum products 
                 We pride ourselves on our highly skilled professionals and innovative approaches that enable us to provide high quality agency services to our clients around the world in the international energy supply industry.
 
                 
-The True commodities Oil Trading team is an international agent for the organisation of coolie transactions in the energy sector. We provide the link between refineries around the world and end consumers. 
+The Taknia Oil Trading team is an international agent for the organisation of coolie transactions in the energy sector. We provide the link between refineries around the world and end consumers. 
 
 
-True commodities Oil Trading has historically traded oil and petroleum products worldwide. But our interests and capabilities extend to all energy markets, including coal, biofuels, natural gas, renewables and more.
+Taknia Oil Trading has historically traded oil and petroleum products worldwide. But our interests and capabilities extend to all energy markets, including coal, biofuels, natural gas, renewables and more.
 
                 </p>
               </Col>
@@ -182,7 +182,7 @@ True commodities Oil Trading has historically traded oil and petroleum products 
         </Container>
       </div>
 
-      <Container className="board-members mt-5">
+      {/* <Container className="board-members mt-5">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -219,7 +219,7 @@ True commodities Oil Trading has historically traded oil and petroleum products 
             </Col>
           </Row>
         </motion.div>
-      </Container>
+      </Container> */}
 
       <Footer />
     </div>

@@ -33,11 +33,12 @@ function MyNavbar() {
         >
           <LinkContainer to="/">
             <Navbar.Brand className="titleHome">
-              <img
+              {/* <img
                 src={logo}
                 alt="True Oil Logo"
                 style={{ width: '200px', height: 'auto' }} 
-              />
+              /> */}
+              Taknia oil
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle 

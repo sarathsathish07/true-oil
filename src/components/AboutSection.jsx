@@ -34,7 +34,7 @@ function AboutSection() {
                 True Commodities Oil Trading L.L.C
               </h2> */}
               <p className="text mobile-padding">
-                <span style={{fontSize:"25px"}}><strong>True commodities Oil Trading L.L.C</strong></span> is characterised not only by an
+                <span style={{fontSize:"25px"}}><strong>Taknia for oil and gas services L.L.C</strong></span> is characterised not only by an
                 experienced international team, but also by a high level of
                 knowledge and expertise in the field. We are constantly improving
                 and adopting the latest technologies and working methods to provide
@@ -54,7 +54,7 @@ function AboutSection() {
                 True Commodities Oil Trading L.L.C
               </h2> */}
                <p className="text mobile-padding">
-                <span className='mobile-heading' ><strong>True commodities Oil Trading L.L.C</strong></span> is characterised not only by an
+                <span className='mobile-heading' ><strong>Taknia for oil and gas services L.L.C</strong></span> is characterised not only by an
                 experienced international team, but also by a high level of
                 knowledge and expertise in the field. We are constantly improving
                 and adopting the latest technologies and working methods to provide

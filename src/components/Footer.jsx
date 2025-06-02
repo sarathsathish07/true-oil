@@ -10,17 +10,18 @@ function Footer() {
           <Col md={5} xs={12} className="mb-4 mb-md-0">
             <h5 className="footerTitle">Address</h5>
             <p className="footerText">
-              Suite 1007, 
-              AL Jaddaf Rotana<br />
-              P.O. Box - 122382<br />
-              Dubai, UAE
+              Citadines
+              Suite 703, 
+              Way 3709-building 631<br />
+              Al Ghubrah<br />
+              Muscat, Oman
             </p>
           </Col>
           <Col md={4} xs={12} className="mb-4 mb-md-0">
             <h5 className="footerTitle">Contact</h5>
             <p className="footerText">
-              Email: info@true-oil.com<br />
-              Phone: +971 56 287 8335
+              Email: info@taknia-oil.com<br />
+              Phone: +968 77 228 026
             </p>
           </Col>
           <Col md={3} xs={12} className="mb-4 mb-md-0">
@@ -41,7 +42,7 @@ function Footer() {
         <Row>
           <Col className="text-center mt-3">
             <p className="copyright">
-              &copy; 2024 True Oil LLC. All rights reserved.
+              &copy; 2025 Taknia Oil LLC. All rights reserved.
             </p>
           </Col>
         </Row>
