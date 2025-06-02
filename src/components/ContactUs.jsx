@@ -1,4 +1,4 @@
-import React, { useRef,useState } from 'react';
+import React, { useRef,useState,useEffect } from 'react';
 import { Container, Form, Button, Row, Col } from 'react-bootstrap';
 import MyNavbar from './Navbar';
 import Footer from './Footer';
@@ -30,6 +30,21 @@ function ContactUs() {
     const [scrolled, setScrolled] = useState(false);
   
     const isMobile = window.innerWidth < 768;
+      useEffect(() => {
+        const handleScroll = () => {
+          if (window.scrollY > 50) {
+            setScrolled(true);
+          } else {
+            setScrolled(false);
+          }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
 
   return (
     <>
